@@ -71,6 +71,49 @@ export const CardsContainer = styled.div`
     gap: 2rem;
 `;
 
+export const CardNumber = styled.div`
+    position: absolute;
+    bottom: -2.5rem;
+    right: -2.5rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: var(--color-primary);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: transform 0.8s;
+    * {
+        position: absolute;
+        bottom: 3.2rem;
+        right: 3.5rem;
+    }
+`;
+
+export const CardTitle = styled.h2`
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1c1c24;
+    z-index: 1;
+    transition: color 0.5s;
+`;
+
+export const CardText = styled.p`
+    color: var(--color-gray);
+    z-index: 1;
+    transition: color 0.5s;
+`;
+
+export const CardIcon = styled.div`
+    font-size: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: var(--color-gray-light);
+    z-index: 1;
+    transition: color 0.5s;
+`;
+
 export const Card = styled.div`
     padding: 40px;
     width: 350px;
@@ -81,40 +124,24 @@ export const Card = styled.div`
     flex-direction: column;
     position: relative;
     overflow: hidden;
-`;
+    transition: box-shadow 0.4s;
 
-export const CardTitle = styled.h2`
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #1c1c24;
-`;
-
-export const CardText = styled.p`
-    color: var(--color-gray);
-`;
-
-export const CardNumber = styled.div`
-    position: absolute;
-    bottom: -2.5rem;
-    right: -2.5rem;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background: var(--color-primary-strong);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-    * {
-        position: absolute;
-        bottom: 3.2rem;
-        right: 3.5rem;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
-`;
 
-export const CardIcon = styled.div`
-    font-size: 4rem;
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    color: var(--color-gray-light);
+    &:hover ${CardNumber} {
+        transform: scale(8);
+    }
+    &:hover ${CardTitle} {
+        color: var(--color-white);
+    }
+    &:hover ${CardText} {
+        color: var(--color-white);
+    }
+    &:hover ${CardIcon} {
+        color: var(--color-white);
+    }
 `;

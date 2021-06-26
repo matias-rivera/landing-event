@@ -32,16 +32,17 @@ const About: React.FC = () => {
                 <InfoTitle>Sobre Nosotros</InfoTitle>
                 <div>
                     <InfoText>
-                        How you transform your business as tech, consumer,
-                        habits industry dynamic change, Find out from those
-                        leading the charge.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá con el contenido del texto de un
+                        sitio mientras que mira su diseño.
                     </InfoText>
                     <InfoText>
-                        How you transform your business as tech, consumer,
-                        habits industry dynamic change, Find out from those
-                        leading the charge. How you transform your business as
-                        tech, consumer, habits industry dynamic change, Find out
-                        from those leading the charge.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá con el contenido del texto de un
+                        sitio mientras que mira su diseño. El punto de usar
+                        Lorem Ipsum es que tiene una distribución más o menos
+                        normal de las letras, al contrario de usar textos como
+                        por ejemplo
                     </InfoText>
                 </div>
                 <InfoItem>
@@ -67,12 +68,10 @@ const About: React.FC = () => {
                     </CardIcon>
                     <CardTitle>Networking</CardTitle>
                     <CardText>
-                        How you transform your business as technology, consumer,
-                        habits industry dynamic.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá.
                     </CardText>
-                    <CardNumber>
-                        <span>1</span>
-                    </CardNumber>
+                    <CardNumber></CardNumber>
                 </Card>
                 <Card>
                     <CardIcon>
@@ -80,12 +79,10 @@ const About: React.FC = () => {
                     </CardIcon>
                     <CardTitle>New People</CardTitle>
                     <CardText>
-                        How you transform your business as technology, consumer,
-                        habits industry dynamic.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá.
                     </CardText>
-                    <CardNumber>
-                        <span>2</span>
-                    </CardNumber>
+                    <CardNumber></CardNumber>
                 </Card>
                 <Card>
                     <CardIcon>
@@ -93,12 +90,10 @@ const About: React.FC = () => {
                     </CardIcon>
                     <CardTitle>Speaking</CardTitle>
                     <CardText>
-                        How you transform your business as technology, consumer,
-                        habits industry dynamic.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá.
                     </CardText>
-                    <CardNumber>
-                        <span>3</span>
-                    </CardNumber>
+                    <CardNumber></CardNumber>
                 </Card>
                 <Card>
                     <CardIcon>
@@ -106,12 +101,10 @@ const About: React.FC = () => {
                     </CardIcon>
                     <CardTitle>Have fun</CardTitle>
                     <CardText>
-                        How you transform your business as technology, consumer,
-                        habits industry dynamic.
+                        Es un hecho establecido hace demasiado tiempo que un
+                        lector se distraerá.
                     </CardText>
-                    <CardNumber>
-                        <span>4</span>
-                    </CardNumber>
+                    <CardNumber></CardNumber>
                 </Card>
             </CardsContainer>
         </Container>

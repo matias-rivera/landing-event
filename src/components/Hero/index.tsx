@@ -8,6 +8,7 @@ import {
     Company,
     Date,
     Button,
+    Image,
 } from "./HeroStyles";
 import { FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
 

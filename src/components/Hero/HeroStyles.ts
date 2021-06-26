@@ -1,11 +1,62 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background: linear-gradient(
-            to right,
-            rgba(56, 108, 11, 0.8),
-            rgba(56, 108, 11, 0.8)
+    /*     background: radial-gradient(
+            circle at 72% 83%,
+            rgba(12, 12, 12, 0.5) 0%,
+            rgba(12, 12, 12, 0.5) 50%,
+            rgba(172, 172, 172, 0.04) 50%,
+            rgba(172, 172, 172, 0.04) 100%
         ),
+        linear-gradient(130deg, rgba(5, 235, 123, 0.8), rgba(47, 52, 6, 0.8)),
+        url("/images/hero.jpg"); */
+
+    background-image: radial-gradient(
+            circle at 37% 80%,
+            hsla(180, 0%, 7%, 0.1) 0%,
+            hsla(180, 0%, 7%, 0.1) 45%,
+            transparent 45%,
+            transparent 73%,
+            transparent 73%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 60% 45%,
+            hsla(180, 0%, 7%, 0.1) 0%,
+            hsla(180, 0%, 7%, 0.1) 67%,
+            transparent 67%,
+            transparent 71%,
+            transparent 71%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 23% 84%,
+            hsla(180, 0%, 7%, 0.1) 0%,
+            hsla(180, 0%, 7%, 0.1) 55%,
+            transparent 55%,
+            transparent 97%,
+            transparent 97%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 52% 76%,
+            hsla(180, 0%, 7%, 0.1) 0%,
+            hsla(180, 0%, 7%, 0.1) 37%,
+            transparent 37%,
+            transparent 95%,
+            transparent 95%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 50% 81%,
+            hsla(180, 0%, 7%, 0.1) 0%,
+            hsla(180, 0%, 7%, 0.1) 79%,
+            transparent 79%,
+            transparent 85%,
+            transparent 85%,
+            transparent 100%
+        ),
+        linear-gradient(45deg, rgba(31, 89, 11, 0.9), rgba(104, 210, 51, 0.9)),
         url("/images/hero.jpg");
     height: 100vh;
     background-position: center;
@@ -26,7 +77,6 @@ export const TitleContainer = styled.div`
 export const Image = styled.img`
     width: 100%;
     height: 100%;
-    opacity: 80%;
 `;
 
 const Text = styled.h1`

@@ -25,13 +25,7 @@ import {
 import Modal from "../Modal";
 
 import { BsPlusCircle } from "react-icons/bs";
-import {
-    FaFacebook,
-    FaTwitter,
-    FaInstagram,
-    FaLinkedin,
-    FaLink,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Speakers: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
