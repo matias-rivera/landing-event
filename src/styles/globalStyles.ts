@@ -11,6 +11,21 @@ export default createGlobalStyle`
     }
     #root{
         margin:0 auto;
+        
+    }
+
+    :root{
+        --color-white:#ffffff;
+        --color-white-2:#F0EFF4;
+        --color-primary-black:#293F14;
+        --color-primary-dark:#386C0B;
+        --color-primary:#38A700;
+        --color-primary-strong: #31D843;
+        --color-primary-light:#3EFF8B;
+        --color-secondary:#CA054D;
+        --color-black: #000000;
+        --color-gray: #5a5a5a;
+        --color-gray-light: #c6c6c6;
     }
     body{
         background:#F9FAFC;

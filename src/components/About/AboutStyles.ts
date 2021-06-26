@@ -14,17 +14,17 @@ export const InfoContainer = styled.div`
 `;
 
 export const InfoSubTitle = styled.h3`
-    color: #5a5a5a;
+    color: var(--color-gray);
     font-weight: 400;
 `;
 
 export const InfoTitle = styled.h1`
     font-size: 3rem;
-    color: #3b1d82;
+    color: var(--color-primary);
 `;
 
 export const InfoText = styled.div`
-    color: #5a5a5a;
+    color: var(--color-gray);
     font-size: 1.1rem;
     line-height: 1.6;
 `;
@@ -36,7 +36,7 @@ export const InfoItem = styled.div`
     font-size: 1.3rem;
 
     span:nth-child(1) {
-        color: #d20055;
+        color: var(--color-primary);
     }
 
     span:nth-child(2) {
@@ -54,14 +54,14 @@ export const Button = styled.button`
     text-transform: uppercase;
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
-    background: #ff007a;
+    background: var(--color-primary);
     border: none;
     border-radius: 5px;
     transition: all 0.2s;
     width: 15rem;
     &:hover {
         cursor: pointer;
-        background: #d20055;
+        background: var(--color-primary-dark);
     }
 `;
 
@@ -90,7 +90,7 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardText = styled.p`
-    color: #5a5a5a;
+    color: var(--color-gray);
 `;
 
 export const CardNumber = styled.div`
@@ -100,7 +100,7 @@ export const CardNumber = styled.div`
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    background: #ff007a;
+    background: var(--color-primary-strong);
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
@@ -116,5 +116,5 @@ export const CardIcon = styled.div`
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    color: #c6c6c6;
+    color: var(--color-gray-light);
 `;

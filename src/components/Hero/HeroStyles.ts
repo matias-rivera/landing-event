@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     background: linear-gradient(
             to right,
-            rgba(0, 8, 106, 0.8),
-            rgba(0, 8, 106, 0.8)
+            rgba(56, 108, 11, 0.8),
+            rgba(56, 108, 11, 0.8)
         ),
         url("/images/hero.jpg");
     height: 100vh;
@@ -81,8 +81,8 @@ export const Button = styled.button`
     &::after {
         background: linear-gradient(
             90deg,
-            rgba(0, 151, 255, 1) 0%,
-            rgba(0, 91, 255, 1) 67%
+            var(--color-primary) 0%,
+            var(--color-primary) 60%
         );
         border-radius: 3rem;
         content: "";
@@ -109,28 +109,3 @@ export const Button = styled.button`
         will-change: transform;
     }
 `;
-
-/* export const Button = styled.button`
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    background: rgb(0, 151, 255);
-    background: linear-gradient(
-        90deg,
-        rgba(0, 151, 255, 1) 0%,
-        rgba(0, 91, 255, 1) 100%
-    );
-    transition: all 2s;
-
-    &:hover {
-        cursor: pointer;
-        background: linear-gradient(
-            90deg,
-            rgba(0, 151, 255, 1) 50%,
-            rgba(0, 91, 255, 1) 100%
-        );
-    }
-`;
- */
