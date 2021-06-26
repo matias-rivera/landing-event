@@ -28,14 +28,11 @@ const About: React.FC = () => {
     return (
         <Container>
             <InfoContainer>
-                <InfoSubTitle>Únete al evento</InfoSubTitle>
-                <InfoTitle>Sobre Nosotros</InfoTitle>
                 <div>
-                    <InfoText>
-                        Es un hecho establecido hace demasiado tiempo que un
-                        lector se distraerá con el contenido del texto de un
-                        sitio mientras que mira su diseño.
-                    </InfoText>
+                    <InfoSubTitle>Únete al evento</InfoSubTitle>
+                    <InfoTitle>Sobre Nosotros</InfoTitle>
+                </div>
+                <div>
                     <InfoText>
                         Es un hecho establecido hace demasiado tiempo que un
                         lector se distraerá con el contenido del texto de un
@@ -45,20 +42,22 @@ const About: React.FC = () => {
                         por ejemplo
                     </InfoText>
                 </div>
-                <InfoItem>
-                    <span>
-                        <FaCalendarAlt />
-                    </span>
-                    <span>Fecha: </span>
-                    <span>Noviembre 19 - Noviembre 22</span>
-                </InfoItem>
-                <InfoItem>
-                    <span>
-                        <FaMapMarkerAlt />
-                    </span>
-                    <span>Lugar: </span>
-                    <span>Tucumán - San Miguel de Tucumán</span>
-                </InfoItem>
+                <div>
+                    <InfoItem>
+                        <span>
+                            <FaCalendarAlt />
+                        </span>
+                        <span>Fecha: </span>
+                        <span>Noviembre 19 - Noviembre 22</span>
+                    </InfoItem>
+                    <InfoItem>
+                        <span>
+                            <FaMapMarkerAlt />
+                        </span>
+                        <span>Lugar: </span>
+                        <span>Tucumán - San Miguel de Tucumán</span>
+                    </InfoItem>
+                </div>
                 <Button>Comprar Ticket</Button>
             </InfoContainer>
             <CardsContainer>

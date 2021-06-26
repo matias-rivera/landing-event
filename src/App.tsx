@@ -4,6 +4,7 @@ import GlobalStyle from "./styles/globalStyles";
 import About from "./components/About";
 import Speakers from "./components/Speakers";
 import Schedule from "./components/Schedule";
+import Extra from "./components/Extra";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Hero />
             <About />
             <Schedule />
+            <Extra />
             <Speakers />
         </>
     );

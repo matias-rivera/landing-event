@@ -20,6 +20,7 @@ import {
     Line,
     ItemPlace,
     ScheduleContainer,
+    ButtonPdf,
 } from "./ScheduleStyles";
 
 const renderItem = () => Details();
@@ -27,12 +28,14 @@ const renderItem = () => Details();
 const Schedule = () => {
     return (
         <Container>
-            <Title>Horario de presentaciones</Title>
-            <SubTitle>
-                Es un hecho establecido hace demasiado tiempo que un lector se
-                distraerá con el contenido del texto de un sitio mientras que
-                mira su diseño.
-            </SubTitle>
+            <div>
+                <Title>Horario de presentaciones</Title>
+                <SubTitle>
+                    Es un hecho establecido hace demasiado tiempo que un lector
+                    se distraerá con el contenido del texto de un sitio mientras
+                    que mira su diseño.
+                </SubTitle>
+            </div>
             <ScheduleContainer>
                 <SwitchContainer>
                     <Switch>
@@ -60,6 +63,7 @@ const Schedule = () => {
                     {renderItem()}
                 </List>
             </ScheduleContainer>
+            <ButtonPdf>Descargar PDF</ButtonPdf>
         </Container>
     );
 };

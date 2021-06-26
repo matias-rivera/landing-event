@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding: 10rem 10rem;
+    padding: 5rem 10rem;
     display: flex;
     justify-content: space-between;
 `;
@@ -34,6 +34,10 @@ export const InfoItem = styled.div`
     align-items: center;
     gap: 0.5rem;
     font-size: 1.3rem;
+
+    &:nth-child(1) {
+        margin-bottom: 0.5rem;
+    }
 
     span:nth-child(1) {
         color: var(--color-primary);

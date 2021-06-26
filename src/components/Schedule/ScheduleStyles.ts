@@ -4,19 +4,19 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5rem 10rem;
+    gap: 2rem;
 `;
 
 export const Title = styled.h1`
     text-align: center;
     color: var(--color-primary-dark);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 `;
 
 export const SubTitle = styled.h3`
     text-align: center;
     color: var(--color-gray);
     font-weight: 400;
-    margin-bottom: 2rem;
 `;
 
 export const ScheduleContainer = styled.div`
@@ -24,20 +24,24 @@ export const ScheduleContainer = styled.div`
 `;
 
 export const SwitchContainer = styled.div`
-    display: flex;
     background: var(--color-primary-dark);
 `;
 
 export const Switch = styled.ul`
     display: flex;
     list-style: none;
+    justify-content: space-between;
 `;
 
 export const SwitchButton = styled.li`
     color: var(--color-white);
     background: var(--color-primary-dark);
-    padding: 2rem;
+    padding: 2rem 0;
     font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s;
+
     &:hover {
         cursor: pointer;
         background: var(--color-primary);
@@ -91,9 +95,9 @@ export const ItemTitle = styled.h3``;
 export const ItemAuthor = styled.h3`
     font-weight: 400;
     span {
-        color: var(--color-primary);
+        color: var(--color-primary-dark);
         &:hover {
-            color: var(--color-primary-dark);
+            color: var(--color-primary);
             cursor: pointer;
         }
     }
@@ -142,5 +146,23 @@ export const ItemPlace = styled.div`
     }
     span:nth-child(2) {
         color: var(--color-gray);
+    }
+`;
+
+export const ButtonPdf = styled.button`
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background: var(--color-primary);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s;
+    width: 15rem;
+    align-self: center;
+
+    &:hover {
+        cursor: pointer;
+        background: var(--color-primary-dark);
     }
 `;
