@@ -6,6 +6,7 @@ import Speakers from "./components/Speakers";
 import Schedule from "./components/Schedule";
 import Extra from "./components/Extra";
 import Memory from "./components/Memory";
+import Tickets from "./components/Tickets";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             <Schedule />
             <Memory />
             <Speakers />
+            <Tickets />
         </>
     );
 };
