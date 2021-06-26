@@ -12,4 +12,7 @@ export default createGlobalStyle`
     #root{
         margin:0 auto;
     }
+    body{
+        background:#F9FAFC;
+    }
 `;
