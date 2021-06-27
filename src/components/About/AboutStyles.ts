@@ -4,10 +4,10 @@ export const Container = styled.div`
     padding: 5rem 10rem;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 `;
 
 export const InfoContainer = styled.div`
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,6 +16,7 @@ export const InfoContainer = styled.div`
 export const InfoSubTitle = styled.h3`
     color: var(--color-gray);
     font-weight: 400;
+    margin-bottom: 0.5rem;
 `;
 
 export const InfoTitle = styled.h1`
@@ -33,7 +34,7 @@ export const InfoItem = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
 
     &:nth-child(1) {
         margin-bottom: 0.5rem;

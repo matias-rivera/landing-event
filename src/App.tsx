@@ -7,6 +7,7 @@ import Schedule from "./components/Schedule";
 import Extra from "./components/Extra";
 import Memory from "./components/Memory";
 import Tickets from "./components/Tickets";
+import Location from "./components/Location";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
             <Memory />
             <Speakers />
             <Tickets />
+            <Location />
         </>
     );
 };

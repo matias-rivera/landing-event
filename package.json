@@ -10,6 +10,7 @@
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
+    "google-map-react": "^2.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -43,6 +44,8 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.10"
+    "@types/google-map-react": "^2.1.1",
+    "@types/styled-components": "^5.1.10",
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }

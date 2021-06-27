@@ -36,10 +36,8 @@ const About: React.FC = () => {
                     <InfoText>
                         Es un hecho establecido hace demasiado tiempo que un
                         lector se distraerá con el contenido del texto de un
-                        sitio mientras que mira su diseño. El punto de usar
-                        Lorem Ipsum es que tiene una distribución más o menos
-                        normal de las letras, al contrario de usar textos como
-                        por ejemplo
+                        sitio mientras que mira su diseño.raerá con el contenido
+                        del texto de un sitio mientras que mira su diseño.
                     </InfoText>
                 </div>
                 <div>

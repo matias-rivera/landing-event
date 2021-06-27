@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 5rem 10rem;
     gap: 2rem;
+    background-image: var(--gradient-white);
 `;
 
 export const Title = styled.h1`
@@ -35,7 +36,8 @@ export const Switch = styled.ul`
 
 export const SwitchButton = styled.li`
     color: var(--color-white);
-    background: var(--color-primary-dark);
+    background: ${({ active }: { active?: boolean }) =>
+        active ? "var(--color-primary);" : "var(--color-primary-dark);"};
     padding: 2rem 0;
     font-size: 1.2rem;
     width: 100%;
@@ -57,7 +59,7 @@ export const SwitchButton = styled.li`
 export const List = styled.ul`
     list-style: none;
     width: 100%;
-
+    background: var(--color-white);
     li:not(li:last-child) {
         border-bottom: none;
     }
@@ -68,8 +70,10 @@ export const ListItem = styled.li`
     padding: 2rem;
     border: 1px solid var(--color-gray-light);
     gap: 2rem;
+    transition: all 0.2s;
     &:hover {
         cursor: pointer;
+        background: var(--color-white-2);
     }
 `;
 
@@ -105,12 +109,11 @@ export const ItemAuthor = styled.h3`
 
 export const ItemDetails = styled.div`
     overflow: hidden;
-    display: ${({ open }: { open?: boolean }) => (open ? "none" : "flex")};
+
+    display: ${({ open }: { open?: boolean }) => (open ? "flex" : "none")};
     flex-direction: column;
     gap: 1rem;
     transition: all 1s;
-
-    /* height: ${({ open }: { open?: boolean }) => (open ? "0" : "100")}; */
 `;
 
 export const ItemFront = styled.div`

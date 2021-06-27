@@ -28,18 +28,26 @@ export const Grid = styled.div`
 
 export const Box = styled.div`
     color: var(--color-white);
-    height: 100%;
-
+    height: 10px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
     align-items: center;
     justify-content: center;
     text-align: center;
     background: rgba(56, 90, 11, 0.8);
-    opacity: 0;
+    padding: 0 2rem;
     transition: all 0.8s;
+
+    bottom: -1rem;
+
+    overflow: hidden;
+
+    span {
+        transition: all 0.6s;
+        opacity: 0;
+    }
 
     span:nth-child(1) {
         font-weight: 700;
@@ -59,9 +67,15 @@ export const Item = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    overflow: hidden;
+    position: relative;
 
     &:hover ${Box} {
+        bottom: 0;
+        height: 100%;
+    }
+
+    &:hover ${Box} span {
         opacity: 1;
     }
 

@@ -35,7 +35,7 @@ export const Container = styled.div`
 
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
+    padding: 5rem 0;
     gap: 4rem;
 `;
 
@@ -118,6 +118,9 @@ export const List = styled.ul`
 export const ListItem = styled.li`
     color: var(--color-gray);
     transition: color 0.5s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 `;
 
 export const TicketButton = styled.button`
@@ -148,7 +151,28 @@ export const SubTitle = styled.h4`
 export const Ticket = styled.div`
     width: 240px;
     height: 350px;
-    background: var(--color-white);
+    background-image: radial-gradient(
+            circle at 27% 33%,
+            rgba(193, 193, 193, 0.04) 0%,
+            rgba(193, 193, 193, 0.04) 50%,
+            rgba(77, 77, 77, 0.04) 50%,
+            rgba(77, 77, 77, 0.04) 100%
+        ),
+        radial-gradient(
+            circle at 35% 8%,
+            rgba(183, 183, 183, 0.04) 0%,
+            rgba(183, 183, 183, 0.04) 50%,
+            rgba(25, 25, 25, 0.04) 50%,
+            rgba(25, 25, 25, 0.04) 100%
+        ),
+        radial-gradient(
+            circle at 93% 50%,
+            rgba(218, 218, 218, 0.04) 0%,
+            rgba(218, 218, 218, 0.04) 50%,
+            rgba(127, 127, 127, 0.04) 50%,
+            rgba(127, 127, 127, 0.04) 100%
+        ),
+        linear-gradient(90deg, hsl(116, 0%, 99%), hsl(116, 0%, 99%));
     display: flex;
     flex-direction: column;
     align-items: center;

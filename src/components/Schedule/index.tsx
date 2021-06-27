@@ -23,9 +23,10 @@ import {
     ButtonPdf,
 } from "./ScheduleStyles";
 
-const renderItem = () => Details();
+const renderItem = () => <Details />;
 
 const Schedule = () => {
+    const [day, setDay] = useState<number>(1);
     return (
         <Container>
             <div>
@@ -39,19 +40,31 @@ const Schedule = () => {
             <ScheduleContainer>
                 <SwitchContainer>
                     <Switch>
-                        <SwitchButton>
+                        <SwitchButton
+                            active={day === 1}
+                            onClick={() => setDay(1)}
+                        >
                             <span>Día 1</span>
                             <span>Noviembre 19, 2021</span>
                         </SwitchButton>
-                        <SwitchButton>
+                        <SwitchButton
+                            active={day === 2}
+                            onClick={() => setDay(2)}
+                        >
                             <span>Día 2</span>
                             <span>Noviembre 20, 2021</span>
                         </SwitchButton>
-                        <SwitchButton>
+                        <SwitchButton
+                            active={day === 3}
+                            onClick={() => setDay(3)}
+                        >
                             <span>Día 3</span>
                             <span>Noviembre 21, 2021</span>
                         </SwitchButton>
-                        <SwitchButton>
+                        <SwitchButton
+                            active={day === 4}
+                            onClick={() => setDay(4)}
+                        >
                             <span>Día 4</span>
                             <span>Noviembre 22, 2021</span>
                         </SwitchButton>
@@ -73,6 +86,7 @@ const Details = () => {
     return (
         <ListItem onClick={() => setOpen(!open)}>
             <ItemPicture src={"/images/person.jpg"} />
+
             <ItemInfo>
                 <ItemFront>
                     <ItemDate>08:00 - 09:00</ItemDate>

@@ -12,6 +12,7 @@ import {
     TicketButton,
     TicketBack,
 } from "./TicketsStyles";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Tickets = () => {
     const renderTicket = () => (
@@ -20,10 +21,21 @@ const Tickets = () => {
             <TicketPrice>$150</TicketPrice>
             <Line />
             <List>
-                <ListItem>Un asiento</ListItem>
-                <ListItem>Bocadillos</ListItem>
-                <ListItem>Desayuno y Almuerzo</ListItem>
-                <ListItem>Entrada al after</ListItem>
+                <ListItem>
+                    <FaCheckCircle /> Un asiento
+                </ListItem>
+                <ListItem>
+                    <FaCheckCircle />
+                    Bocadillos
+                </ListItem>
+                <ListItem>
+                    <FaCheckCircle />
+                    Desayuno y Almuerzo
+                </ListItem>
+                <ListItem>
+                    <FaCheckCircle />
+                    Entrada al after
+                </ListItem>
             </List>
             <TicketButton>Reservar</TicketButton>
             <TicketBack />
