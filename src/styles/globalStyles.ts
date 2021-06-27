@@ -23,6 +23,7 @@ export default createGlobalStyle`
         --color-primary-light:#3EFF8B;
         --color-secondary:#CA054D;
         --color-black: #000000;
+        --color-black-2: 	#101010;
         --color-gray: #5a5a5a;
         --color-gray-light: #c6c6c6;
         --gradient-white: radial-gradient(
@@ -75,6 +76,64 @@ export default createGlobalStyle`
             transparent 100%
         ),
         linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+          --gradient-primary:radial-gradient(
+            circle at 72% 83%,
+            rgba(12, 12, 12, 0.04) 0%,
+            rgba(12, 12, 12, 0.04) 50%,
+            rgba(172, 172, 172, 0.04) 50%,
+            rgba(172, 172, 172, 0.04) 100%
+        ),
+        radial-gradient(
+            circle at 57% 65%,
+            rgba(11, 11, 11, 0.04) 0%,
+            rgba(11, 11, 11, 0.04) 50%,
+            rgba(222, 222, 222, 0.04) 50%,
+            rgba(222, 222, 222, 0.04) 100%
+        ),
+        radial-gradient(
+            circle at 64% 31%,
+            rgba(11, 11, 11, 0.04) 0%,
+            rgba(11, 11, 11, 0.04) 50%,
+            rgba(191, 191, 191, 0.04) 50%,
+            rgba(191, 191, 191, 0.04) 100%
+        ),
+        linear-gradient(130deg, rgb(5, 235, 123), rgb(47, 52, 6));
+        --gradient-primary-2:radial-gradient(
+            circle at 85% 1%,
+            hsla(190, 0%, 93%, 0.05) 0%,
+            hsla(190, 0%, 93%, 0.05) 96%,
+            transparent 96%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 14% 15%,
+            hsla(190, 0%, 93%, 0.05) 0%,
+            hsla(190, 0%, 93%, 0.05) 1%,
+            transparent 1%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 60% 90%,
+            hsla(190, 0%, 93%, 0.05) 0%,
+            hsla(190, 0%, 93%, 0.05) 20%,
+            transparent 20%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 79% 7%,
+            hsla(190, 0%, 93%, 0.05) 0%,
+            hsla(190, 0%, 93%, 0.05) 78%,
+            transparent 78%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 55% 65%,
+            hsla(190, 0%, 93%, 0.05) 0%,
+            hsla(190, 0%, 93%, 0.05) 52%,
+            transparent 52%,
+            transparent 100%
+        ),
+        linear-gradient(135deg, rgb(56, 108, 11), rgb(56, 167, 0));
     }
     body{
         background:#F9FAFC;

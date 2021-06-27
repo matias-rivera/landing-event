@@ -51,28 +51,7 @@ export const TicketContainer = styled.div`
 export const TicketBack = styled.div`
     width: 50px;
     height: 50px;
-    background-image: radial-gradient(
-            circle at 72% 83%,
-            rgba(12, 12, 12, 0.04) 0%,
-            rgba(12, 12, 12, 0.04) 50%,
-            rgba(172, 172, 172, 0.04) 50%,
-            rgba(172, 172, 172, 0.04) 100%
-        ),
-        radial-gradient(
-            circle at 57% 65%,
-            rgba(11, 11, 11, 0.04) 0%,
-            rgba(11, 11, 11, 0.04) 50%,
-            rgba(222, 222, 222, 0.04) 50%,
-            rgba(222, 222, 222, 0.04) 100%
-        ),
-        radial-gradient(
-            circle at 64% 31%,
-            rgba(11, 11, 11, 0.04) 0%,
-            rgba(11, 11, 11, 0.04) 50%,
-            rgba(191, 191, 191, 0.04) 50%,
-            rgba(191, 191, 191, 0.04) 100%
-        ),
-        linear-gradient(130deg, rgb(5, 235, 123), rgb(47, 52, 6));
+    background-image: var(--gradient-primary);
     border-radius: 50%;
     position: absolute;
     bottom: -3rem;

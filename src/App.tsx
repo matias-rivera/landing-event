@@ -8,8 +8,10 @@ import Extra from "./components/Extra";
 import Memory from "./components/Memory";
 import Tickets from "./components/Tickets";
 import Location from "./components/Location";
-import Hurry from "./components/Hurry";
 import Newsletter from "./components/Newsletter";
+import Hurry from "./components/Hurry";
+import Sponsors from "./components/Sponsors";
+import Footer from "./components/Footer";
 
 const App = () => {
     return (
@@ -23,8 +25,10 @@ const App = () => {
             <Speakers />
             <Tickets />
             <Location />
-            <Hurry />
             <Newsletter />
+            <Sponsors />
+            <Hurry />
+            <Footer />
         </>
     );
 };
