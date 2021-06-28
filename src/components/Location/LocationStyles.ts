@@ -3,6 +3,22 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     padding: 5rem 10rem;
+    gap: 1rem;
+
+    @media (max-width: 1200px) {
+        padding: 5rem 5rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const Event = styled.div`
@@ -29,6 +45,9 @@ export const MapContainer = styled.div`
     padding: 1rem;
     border-radius: 10px;
     background: white;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 `;
 
 export const Info = styled.div`
@@ -36,6 +55,13 @@ export const Info = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+        width: 100%;
+        gap: 2rem;
+    }
+    @media (max-width: 768px) {
+        align-items: center;
+    }
 `;
 
 export const SubTitle = styled.h4`
@@ -43,10 +69,17 @@ export const SubTitle = styled.h4`
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 export const Title = styled.h1`
     color: var(--color-primary-dark);
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 `;
 
 export const Line = styled.hr`
@@ -74,6 +107,9 @@ export const SwitchButton = styled.li`
         color: var(--color-white);
         background: var(--color-primary);
     }
+    @media (max-width: 480px) {
+        padding: 0.4rem 0.6rem;
+    }
 `;
 
 export const InfoBox = styled.div`
@@ -90,6 +126,9 @@ export const InfoBox = styled.div`
 export const DetailsBox = styled.div`
     display: flex;
     gap: 2rem;
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `;
 export const Details = styled.div`
     display: flex;

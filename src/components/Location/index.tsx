@@ -21,7 +21,7 @@ const Location: React.FC = () => {
             <Info>
                 <div>
                     <SubTitle>Informate</SubTitle>
-                    <Title>Obten las dirección al evento</Title>
+                    <Title>Lugar y Hora</Title>
                 </div>
                 <div>
                     <Switch>

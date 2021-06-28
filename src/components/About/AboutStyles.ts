@@ -5,29 +5,57 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 50%;
+    @media (max-width: 1201px) {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
 `;
 
 export const InfoSubTitle = styled.h3`
     color: var(--color-gray);
     font-weight: 400;
     margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 export const InfoTitle = styled.h1`
     font-size: 3rem;
     color: var(--color-primary);
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 export const InfoText = styled.div`
     color: var(--color-gray);
     font-size: 1.1rem;
     line-height: 1.6;
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 export const InfoItem = styled.div`
@@ -35,6 +63,9 @@ export const InfoItem = styled.div`
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 
     &:nth-child(1) {
         margin-bottom: 0.5rem;
@@ -49,7 +80,7 @@ export const InfoItem = styled.div`
     }
 
     span:nth-child(3) {
-        margin-left: 1rem;
+        margin-left: 0.1rem;
         font-weight: 400;
     }
 `;
@@ -74,6 +105,11 @@ export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    justify-items: center;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const CardNumber = styled.div`
@@ -121,7 +157,7 @@ export const CardIcon = styled.div`
 
 export const Card = styled.div`
     padding: 40px;
-    width: 350px;
+    max-width: 350px;
     height: 200px;
     background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

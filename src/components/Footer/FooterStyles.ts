@@ -7,6 +7,17 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+
+    @media (max-width: 1200px) {
+        padding: 5rem 7rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+    }
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const Title = styled.div`
@@ -19,6 +30,9 @@ export const Title = styled.div`
     margin-bottom: 0.5rem;
     h1 {
         font-size: 1.8rem;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
     }
 
     h1 {
@@ -43,6 +57,11 @@ export const SiteList = styled.ul`
     display: flex;
     list-style: none;
     gap: 1.5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const SiteListItem = styled.li`
@@ -50,7 +69,7 @@ export const SiteListItem = styled.li`
     transition: all 0.2s;
 
     font-weight: 600;
-
+    text-align: center;
     &:hover {
         cursor: pointer;
         color: var(--color-primary);
@@ -60,6 +79,7 @@ export const SiteListItem = styled.li`
 
 export const Copyright = styled.p`
     color: var(--color-gray-light);
+    text-align: center;
 `;
 
 export const SocialList = styled.ul`

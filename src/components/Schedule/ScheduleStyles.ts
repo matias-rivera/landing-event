@@ -6,6 +6,17 @@ export const Container = styled.div`
     padding: 5rem 10rem;
     gap: 2rem;
     background-image: var(--gradient-white);
+
+    @media (max-width: 1200px) {
+        padding: 5rem 7rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+    }
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const Title = styled.h1`
@@ -53,6 +64,25 @@ export const SwitchButton = styled.li`
         font-weight: 800;
         font-size: 1.5rem;
         margin-right: 0.5rem;
+        @media (max-width: 1200px) {
+            font-size: 1rem;
+        }
+        @media (max-width: 1024px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    span:nth-child(2) {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 0.9rem;
+    }
+    @media (max-width: 769px) {
+        padding: 1.2rem 0;
     }
 `;
 
@@ -81,6 +111,9 @@ export const ItemPicture = styled.img`
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const ItemInfo = styled.div`

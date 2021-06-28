@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+    }
 `;
 
 export const Image = styled.div`
@@ -16,6 +19,14 @@ export const Image = styled.div`
 
     background-position: center;
     background-size: cover;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 300px;
+    }
+    @media (max-width: 769px) {
+        display: none;
+    }
 `;
 
 export const Info = styled.div`
@@ -62,6 +73,12 @@ export const Info = styled.div`
     justify-content: center;
     padding: 4rem;
     gap: 1.5rem;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+
+        padding: 2rem;
+    }
 `;
 
 export const SubTitle = styled.h3`

@@ -79,8 +79,8 @@ const Speakers: React.FC = () => {
                     </ProfileInfo>
                 </Profile>
             </Modal>
-            <SubTitle>Conoce a</SubTitle>
-            <Title>Nuestros Presentadores</Title>
+            {/* <SubTitle>Conoce a</SubTitle> */}
+            <Title>Presentadores</Title>
             <Underline />
             <SpeakersContainer>
                 {renderSpeaker()}

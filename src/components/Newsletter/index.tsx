@@ -33,10 +33,12 @@ const Newsletter: React.FC = () => {
             </SocialList>
             <Form>
                 <Label>Suscribite para recibir novedades!</Label>
-                <Input placeholder="micorreo@example.com" />
-                <Submit>
-                    <FaEnvelope /> Enviar
-                </Submit>
+                <div>
+                    <Input placeholder="micorreo@example.com" />
+                    <Submit>
+                        <FaEnvelope /> <span>Enviar</span>
+                    </Submit>
+                </div>
             </Form>
         </Container>
     );

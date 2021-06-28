@@ -8,6 +8,17 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 3rem;
+
+    @media (max-width: 1200px) {
+        padding: 5rem 5rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+    }
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const Title = styled.h1`
@@ -15,12 +26,23 @@ export const Title = styled.h1`
 `;
 
 export const SponsorsContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     img {
         height: 50px;
         width: 150px;
         transition: all 0.3s;
         &:hover {
             transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            height: 50px;
+            width: 100px;
+        }
+        @media (max-width: 480px) {
+            height: 40px;
+            width: 75px;
         }
     }
 `;

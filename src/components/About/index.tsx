@@ -30,7 +30,7 @@ const About: React.FC = () => {
             <InfoContainer>
                 <div>
                     <InfoSubTitle>Únete al evento</InfoSubTitle>
-                    <InfoTitle>Sobre Nosotros</InfoTitle>
+                    <InfoTitle>Nosotros</InfoTitle>
                 </div>
                 <div>
                     <InfoText>

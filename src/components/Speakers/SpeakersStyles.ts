@@ -6,6 +6,17 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     background-image: var(--gradient-white);
+
+    @media (max-width: 1200px) {
+        padding: 5rem 7rem;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 5rem 5rem;
+    }
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+    }
 `;
 
 export const SubTitle = styled.h2`
@@ -30,6 +41,10 @@ export const SpeakersContainer = styled.div`
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 export const PictureIcon = styled.div`
@@ -47,12 +62,13 @@ export const PictureIcon = styled.div`
 
 export const Picture = styled.img`
     width: 100%;
+    height: 100%;
     transition: all 0.3s;
 `;
 
 export const PictureContainer = styled.div`
-    width: 255px;
-    height: 255px;
+    /*    width: 255px;
+    height: 255px; */
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -63,19 +79,24 @@ export const SpeakerName = styled.h2`
     text-align: center;
     margin-bottom: 0.5rem;
     color: var(--color-black);
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
 `;
 
 export const SpeakerInfo = styled.h4`
     text-align: center;
     color: var(--color-gray);
     font-weight: 400;
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+    }
 `;
 
 export const Speaker = styled.div`
-    width: 255px;
-    height: 360px;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 
     &:hover ${PictureContainer} {
         background: var(--color-primary-dark);
@@ -99,17 +120,37 @@ export const Speaker = styled.div`
 
 export const Profile = styled.div`
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 60rem;
+    @media (max-width: 1024px) {
+        width: 45rem;
+        height: 25rem;
+    }
+    @media (max-width: 768px) {
+        width: 25rem;
+        height: 25rem;
+    }
+    @media (max-width: 480px) {
+        width: 18rem;
+        height: 30rem;
+    }
 `;
 export const ProfilePicture = styled.img`
-    width: 555px;
+    height: 100%;
+    max-width: 50%;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 export const ProfileInfo = styled.div`
-    padding: 4rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2.2rem;
+    gap: 1.5rem;
+    @media (max-width: 1200px) {
+        gap: 1rem;
+        padding: 3rem 2rem;
+        flex-grow: 2;
+    }
 `;
 export const ProfileTitle = styled.h1`
     color: var(--color-primary);

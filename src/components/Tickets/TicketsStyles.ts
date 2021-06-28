@@ -35,17 +35,24 @@ export const Container = styled.div`
 
     flex-direction: column;
     align-items: center;
-    padding: 5rem 0;
+    padding: 5rem 1rem;
     gap: 4rem;
 `;
 
 export const Title = styled.h1`
     color: var(--color-white);
+    text-align: center;
 `;
 
 export const TicketContainer = styled.div`
     display: flex;
     gap: 4rem;
+    @media (max-width: 1024px) {
+        gap: 2rem;
+    }
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 `;
 
 export const TicketBack = styled.div`
@@ -125,6 +132,7 @@ export const TicketButton = styled.button`
 export const SubTitle = styled.h4`
     color: var(--color-white);
     font-weight: 400;
+    text-align: center;
 `;
 
 export const Ticket = styled.div`
@@ -179,5 +187,13 @@ export const Ticket = styled.div`
 
     &:hover ${Line} {
         background: var(--color-white-2);
+    }
+
+    @media (max-width: 900px) {
+        width: 300px;
+    }
+
+    @media (max-width: 480px) {
+        width: 240px;
     }
 `;

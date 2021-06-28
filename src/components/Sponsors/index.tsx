@@ -9,7 +9,6 @@ const Sponsors: React.FC = () => {
             </SponsorsContainer>
             <SponsorsContainer>
                 <img src={"/images/sponsors/oracle.svg"} />
-                <img src={"/images/sponsors/aws.svg"} />
                 <img src={"/images/sponsors/unity.svg"} />
                 <img src={"/images/sponsors/cisco.svg"} />
             </SponsorsContainer>

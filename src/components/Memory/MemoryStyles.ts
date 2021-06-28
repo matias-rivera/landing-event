@@ -11,7 +11,6 @@ export const TitleContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
 `;
 export const Title = styled.h1`
@@ -24,6 +23,9 @@ export const SubTitle = styled.h3`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 export const Box = styled.div`
@@ -39,7 +41,7 @@ export const Box = styled.div`
     background: rgba(56, 90, 11, 0.8);
     padding: 0 2rem;
     transition: all 0.8s;
-
+    font-size: 1.2rem;
     bottom: -1rem;
 
     overflow: hidden;
@@ -51,10 +53,14 @@ export const Box = styled.div`
 
     span:nth-child(1) {
         font-weight: 700;
-        font-size: 1.1rem;
     }
     span:nth-child(2) {
-        font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
     }
 `;
 
@@ -63,7 +69,7 @@ export const Item = styled.div`
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +87,15 @@ export const Item = styled.div`
 
     &:hover {
         cursor: pointer;
+    }
+    @media (max-width: 1024px) {
+        height: 250px;
+    }
+    @media (max-width: 768px) {
+        height: 200px;
+    }
+    @media (max-width: 480px) {
+        height: 150px;
     }
 `;
 
