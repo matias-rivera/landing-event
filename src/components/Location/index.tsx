@@ -17,7 +17,7 @@ import Map from "../Map";
 const Location: React.FC = () => {
     const [option, setOption] = useState<number>(1);
     return (
-        <Container>
+        <Container id="location">
             <Info>
                 <div>
                     <SubTitle>Informate</SubTitle>

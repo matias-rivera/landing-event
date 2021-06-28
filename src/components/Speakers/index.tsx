@@ -42,7 +42,7 @@ const Speakers: React.FC = () => {
         </Speaker>
     );
     return (
-        <Container>
+        <Container id="speakers">
             <Modal open={isOpen} onClose={() => setIsOpen(false)}>
                 <Profile>
                     <ProfilePicture src={"/images/person.jpg"} />

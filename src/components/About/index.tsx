@@ -26,7 +26,7 @@ import { GiPublicSpeaker, GiPartyPopper } from "react-icons/gi";
 
 const About: React.FC = () => {
     return (
-        <Container>
+        <Container id="about">
             <InfoContainer>
                 <div>
                     <InfoSubTitle>Únete al evento</InfoSubTitle>

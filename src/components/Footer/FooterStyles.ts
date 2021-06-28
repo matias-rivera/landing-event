@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     padding: 5rem 10rem;
-    background: var(--color-black-2);
+    background: var(--color-primary-darken);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,13 +25,14 @@ export const Title = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
-
+    justify-content: center;
     letter-spacing: 0.3rem;
     margin-bottom: 0.5rem;
     h1 {
         font-size: 1.8rem;
+
         @media (max-width: 768px) {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -51,6 +52,9 @@ export const SubTitle = styled.h4`
     font-weight: 400;
     text-align: center;
     color: var(--color-white-2);
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 export const SiteList = styled.ul`

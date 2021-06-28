@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "./components/Hero";
 import GlobalStyle from "./styles/globalStyles";
 import About from "./components/About";
@@ -13,10 +13,21 @@ import Hurry from "./components/Hurry";
 import Sponsors from "./components/Sponsors";
 import Footer from "./components/Footer";
 
+import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
 const App = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
     return (
-        <>
+        <Router>
             <GlobalStyle />
+            <Navbar toggle={toggle} />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
             <Hero />
             <About />
             <Extra />
@@ -29,7 +40,7 @@ const App = () => {
             <Sponsors />
             <Hurry />
             <Footer />
-        </>
+        </Router>
     );
 };
 

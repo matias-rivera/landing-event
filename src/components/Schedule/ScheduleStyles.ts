@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div`
+export const Container = styled.section`
     display: flex;
     flex-direction: column;
     padding: 5rem 10rem;

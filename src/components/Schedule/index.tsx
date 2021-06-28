@@ -28,7 +28,7 @@ const renderItem = () => <Details />;
 const Schedule = () => {
     const [day, setDay] = useState<number>(1);
     return (
-        <Container>
+        <Container id="schedule">
             <div>
                 <Title>Horario de presentaciones</Title>
                 <SubTitle>

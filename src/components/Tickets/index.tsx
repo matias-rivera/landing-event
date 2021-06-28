@@ -16,7 +16,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const Tickets = () => {
     const renderTicket = () => (
-        <Ticket>
+        <Ticket id="subscribe">
             <TicketTitle>Regular</TicketTitle>
             <TicketPrice>$150</TicketPrice>
             <Line />

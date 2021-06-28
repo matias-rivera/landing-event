@@ -57,17 +57,13 @@ export const Container = styled.div`
     justify-content: center;
     gap: 4rem;
 
-    @media (max-height: 1024px) {
-        height: 70vh;
-    }
-
     @media (max-height: 768px) {
         gap: 3rem;
         height: 100vh;
     }
 
     @media (max-height: 480px) {
-        gap: 2rem;
+        gap: 1rem;
     }
 `;
 
@@ -98,11 +94,6 @@ export const Title = styled(Text)`
     }
     @media (max-width: 768px) {
         font-size: 2.7rem;
-        -webkit-text-stroke: 1px white;
-    }
-    @media (max-height: 768px) {
-        font-size: 2rem;
-        -webkit-text-stroke: 1px white;
     }
 `;
 
@@ -113,10 +104,6 @@ export const SubTitle = styled(Text)`
     }
     @media (max-width: 768px) {
         font-size: 1.5rem;
-        font-weight: 400;
-    }
-    @media (max-height: 768px) {
-        font-size: 1.3rem;
         font-weight: 400;
     }
 `;
@@ -132,9 +119,6 @@ export const Location = styled(Text)`
     }
     @media (max-width: 768px) {
         font-size: 1.2rem;
-    }
-    @media (max-height: 768px) {
-        font-size: 1.1rem;
     }
 `;
 
@@ -156,9 +140,6 @@ export const Date = styled(Text)`
     }
     @media (max-width: 768px) {
         font-size: 1.2rem;
-    }
-    @media (max-height: 768px) {
-        font-size: 1.1rem;
     }
 `;
 
@@ -213,9 +194,5 @@ export const Button = styled.button`
 
     @media (max-width: 1024px) {
         font-size: 1.2rem;
-    }
-    @media (max-height: 480px) {
-        font-size: 1rem;
-        padding: 0.7rem 1.5rem;
     }
 `;

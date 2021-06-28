@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
     background-image: radial-gradient(
             circle at 52% 94%,
             rgba(169, 169, 169, 0.04) 0%,
