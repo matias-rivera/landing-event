@@ -11,11 +11,43 @@ import {
     InfoBox,
     DetailsBox,
     Details,
+    Black,
+    SwitchContainer,
 } from "./LocationStyles";
 import Map from "../Map";
 
 const Location: React.FC = () => {
     const [option, setOption] = useState<number>(1);
+
+    const renderInfo = () => {
+        if (option === 1) {
+            return (
+                <>
+                    <h3>San Miguel de Tucumán, Tucumán</h3>
+                    <span>CALLE 01, AVENIDA 1002</span>
+                    <span>Argentina</span>
+                </>
+            );
+        } else if (option === 2) {
+            return (
+                <>
+                    <span>
+                        <Black>Viernes 19:</Black> 08:30 - 18:00
+                    </span>
+                    <span>
+                        <Black>Sábado 20:</Black> 08:30 - 18:00
+                    </span>
+                    <span>
+                        <Black>Domingo 21:</Black> 10:00 - 15:00
+                    </span>
+                    <span>
+                        <Black>Lunes 22:</Black> 8:30 - 18:00
+                    </span>
+                </>
+            );
+        }
+    };
+
     return (
         <Container id="location">
             <Info>
@@ -23,7 +55,7 @@ const Location: React.FC = () => {
                     <SubTitle>Informate</SubTitle>
                     <Title>Lugar y Hora</Title>
                 </div>
-                <div>
+                <SwitchContainer>
                     <Switch>
                         <SwitchButton
                             active={option === 1}
@@ -35,21 +67,17 @@ const Location: React.FC = () => {
                             active={option === 2}
                             onClick={() => setOption(2)}
                         >
-                            Horario
+                            Programa
                         </SwitchButton>
-                        <SwitchButton
+                        {/*                         <SwitchButton
                             active={option === 3}
                             onClick={() => setOption(3)}
                         >
                             Como llegar
-                        </SwitchButton>
+                        </SwitchButton> */}
                     </Switch>
-                    <InfoBox>
-                        <h3>San Miguel de Tucumán, Tucumán</h3>
-                        <span>CALLE 01, AVENIDA 1002</span>
-                        <span>Argentina</span>
-                    </InfoBox>
-                </div>
+                    <InfoBox>{renderInfo()}</InfoBox>
+                </SwitchContainer>
 
                 <DetailsBox>
                     <Details>

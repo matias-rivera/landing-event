@@ -15,7 +15,7 @@ export const Image = styled.div`
             rgba(56, 108, 11, 0.4),
             rgba(56, 108, 11, 0.4)
         ),
-        url("/images/hero.jpg");
+        url("/images/extra.jpg");
 
     background-position: center;
     background-size: cover;

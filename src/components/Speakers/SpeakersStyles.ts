@@ -28,13 +28,14 @@ export const SubTitle = styled.h2`
 export const Title = styled.h1`
     text-align: center;
     color: var(--color-primary-dark);
+    font-size: 1.8rem;
 `;
 
 export const Underline = styled.hr`
     color: var(--color-primary-dark);
-    width: 100px;
+    width: 70px;
     align-self: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 `;
 
 export const SpeakersContainer = styled.div`
@@ -63,16 +64,26 @@ export const PictureIcon = styled.div`
 export const Picture = styled.img`
     width: 100%;
     height: 100%;
+
     transition: all 0.3s;
 `;
 
 export const PictureContainer = styled.div`
-    /*    width: 255px;
-    height: 255px; */
     border-radius: 50%;
+    height: 150px;
     overflow: hidden;
     position: relative;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100px;
+        height: 100px;
+    }
 `;
 
 export const SpeakerName = styled.h2`
@@ -97,6 +108,8 @@ export const Speaker = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
 
     &:hover ${PictureContainer} {
         background: var(--color-primary-dark);
@@ -120,18 +133,22 @@ export const Speaker = styled.div`
 
 export const Profile = styled.div`
     display: flex;
-    width: 60rem;
+    width: 70rem;
+    height: 30rem;
     @media (max-width: 1024px) {
-        width: 45rem;
-        height: 25rem;
+        width: 48rem;
+        height: 26rem;
     }
     @media (max-width: 768px) {
         width: 25rem;
-        height: 25rem;
+        height: 100%;
     }
     @media (max-width: 480px) {
         width: 18rem;
-        height: 30rem;
+        height: 100%;
+    }
+    @media (max-height: 480px) {
+        width: 100vw;
     }
 `;
 export const ProfilePicture = styled.img`
@@ -161,7 +178,9 @@ export const ProfileSubTitle = styled.h3`
     font-weight: 400;
 `;
 export const ProfileCompany = styled.img`
-    width: 200px;
+    align-self: flex-start;
+    max-height: 40px;
+    max-width: 80px;
 `;
 export const ProfileBio = styled.p`
     color: var(--color-gray);

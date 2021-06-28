@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Container = styled.div`
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -39,7 +40,7 @@ export const Title = styled.div`
     font-weight: 800;
 `;
 
-export const Button = styled.button`
+export const Button = styled(LinkScroll)`
     color: white;
     text-transform: uppercase;
     padding: 1rem 1.5rem;
@@ -48,7 +49,8 @@ export const Button = styled.button`
     border: none;
     border-radius: 5px;
     transition: all 0.2s;
-    width: 15rem;
+
+    text-align: center;
     align-self: center;
 
     &:hover {

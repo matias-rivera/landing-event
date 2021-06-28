@@ -27,7 +27,8 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+
+    height: 100%;
     z-index: 1;
     width: 100%;
     max-width: 90vw;
@@ -44,6 +45,20 @@ export const NavLink = styled(LinkScroll)`
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+
+    h6 {
+        transition: all 0.3s;
+        span {
+            transition: inherit;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            span {
+                color: var(--color-primary-strong);
+            }
+        }
+    }
 `;
 
 export const MobileIcon = styled.div`
@@ -62,15 +77,15 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: --22px;
 
+    height: 100%;
     @media screen and (max-width: 768px) {
         display: none;
     }
 `;
 
 export const NavItem = styled.li`
-    height: 50px;
+    height: 100%;
 `;
 
 export const NavLinks = styled(LinkScroll)`

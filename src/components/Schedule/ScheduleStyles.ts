@@ -3,8 +3,9 @@ import styled from "styled-components/macro";
 export const Container = styled.section`
     display: flex;
     flex-direction: column;
+
     padding: 5rem 10rem;
-    gap: 2rem;
+    gap: 0.5rem;
     background-image: var(--gradient-white);
 
     @media (max-width: 1200px) {
@@ -22,13 +23,20 @@ export const Container = styled.section`
 export const Title = styled.h1`
     text-align: center;
     color: var(--color-primary-dark);
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
 `;
 
 export const SubTitle = styled.h3`
     text-align: center;
     color: var(--color-gray);
     font-weight: 400;
+`;
+
+export const Underline = styled.hr`
+    color: var(--color-primary-dark);
+    width: 70px;
+    align-self: center;
+    margin-bottom: 2rem;
 `;
 
 export const ScheduleContainer = styled.div`
@@ -162,9 +170,9 @@ export const ItemText = styled.p`
 `;
 
 export const ItemTags = styled.div`
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
-    color: var(--color-primary-black);
+    color: var(--color-primary-dark);
 `;
 
 export const Line = styled.hr`
@@ -196,7 +204,7 @@ export const ButtonPdf = styled.button`
     transition: all 0.2s;
     width: 15rem;
     align-self: center;
-
+    margin-top: 2rem;
     &:hover {
         cursor: pointer;
         background: var(--color-primary-dark);

@@ -21,49 +21,56 @@ import {
     ItemPlace,
     ScheduleContainer,
     ButtonPdf,
+    Underline,
 } from "./ScheduleStyles";
 
-const renderItem = () => <Details />;
+interface ScheduleProps {
+    schedule: {
+        job: string;
+        company: string;
+        author: string;
+        title: string;
+        time: string;
+        text: string;
+        category: string;
+        place: string;
+        picture: string[];
+    }[][];
+}
 
-const Schedule = () => {
-    const [day, setDay] = useState<number>(1);
+const Schedule: React.FC<ScheduleProps> = ({ schedule }: ScheduleProps) => {
+    const [day, setDay] = useState<number>(0);
     return (
         <Container id="schedule">
-            <div>
-                <Title>Horario de presentaciones</Title>
-                <SubTitle>
-                    Es un hecho establecido hace demasiado tiempo que un lector
-                    se distraerá con el contenido del texto de un sitio mientras
-                    que mira su diseño.
-                </SubTitle>
-            </div>
+            <Title>Programa</Title>
+            <Underline />
             <ScheduleContainer>
                 <SwitchContainer>
                     <Switch>
                         <SwitchButton
-                            active={day === 1}
-                            onClick={() => setDay(1)}
+                            active={day === 0}
+                            onClick={() => setDay(0)}
                         >
                             <span>Día 1</span>
                             <span>Noviembre 19, 2021</span>
                         </SwitchButton>
                         <SwitchButton
-                            active={day === 2}
-                            onClick={() => setDay(2)}
+                            active={day === 1}
+                            onClick={() => setDay(1)}
                         >
                             <span>Día 2</span>
                             <span>Noviembre 20, 2021</span>
                         </SwitchButton>
                         <SwitchButton
-                            active={day === 3}
-                            onClick={() => setDay(3)}
+                            active={day === 2}
+                            onClick={() => setDay(2)}
                         >
                             <span>Día 3</span>
                             <span>Noviembre 21, 2021</span>
                         </SwitchButton>
                         <SwitchButton
-                            active={day === 4}
-                            onClick={() => setDay(4)}
+                            active={day === 3}
+                            onClick={() => setDay(3)}
                         >
                             <span>Día 4</span>
                             <span>Noviembre 22, 2021</span>
@@ -71,9 +78,9 @@ const Schedule = () => {
                     </Switch>
                 </SwitchContainer>
                 <List>
-                    {renderItem()}
-                    {renderItem()}
-                    {renderItem()}
+                    {schedule[day].map((data, i) => (
+                        <Details speech={data} key={i} />
+                    ))}
                 </List>
             </ScheduleContainer>
             <ButtonPdf>Descargar PDF</ButtonPdf>
@@ -81,35 +88,41 @@ const Schedule = () => {
     );
 };
 
-const Details = () => {
+interface DetailsProps {
+    speech: {
+        job: string;
+        company: string;
+        author: string;
+        title: string;
+        time: string;
+        text: string;
+        category: string;
+        place: string;
+        picture: string[];
+    };
+}
+
+const Details = ({ speech }: DetailsProps) => {
     const [open, setOpen] = useState<boolean>(false);
     return (
         <ListItem onClick={() => setOpen(!open)}>
-            <ItemPicture src={"/images/person.jpg"} />
+            <ItemPicture src={speech.picture[0]} />
 
             <ItemInfo>
                 <ItemFront>
-                    <ItemDate>08:00 - 09:00</ItemDate>
-                    <ItemTitle>Algoritmos Géneticos</ItemTitle>
+                    <ItemDate>{speech.time}</ItemDate>
+                    <ItemTitle>{speech.title}</ItemTitle>
                     <ItemAuthor>
-                        Por <span>Rivera, Juan Matías</span> - Frontend
-                        Developer
+                        Por <span>{speech.author}</span> - {speech.job}
                     </ItemAuthor>
                 </ItemFront>
                 <ItemDetails open={open}>
-                    <ItemText>
-                        Es un hecho establecido hace demasiado tiempo que un
-                        lector se distraerá con el contenido del texto de un
-                        sitio mientras que mira su diseño. El punto de usar
-                        Lorem Ipsum es que tiene una distribución más o menos
-                        normal de las letras, al contrario de usar textos como
-                        por ejemplo
-                    </ItemText>
-                    <ItemTags>INTELIGENCIA ARTIFICIAL</ItemTags>
+                    <ItemText>{speech.text}</ItemText>
+                    <ItemTags>{speech.category}</ItemTags>
                     <Line />
                     <ItemPlace>
                         <span>LUGAR</span>
-                        <span>Habitación 202, Segundo Piso</span>
+                        <span>{speech.place}</span>
                     </ItemPlace>
                 </ItemDetails>
             </ItemInfo>

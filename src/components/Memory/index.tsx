@@ -9,15 +9,15 @@ import {
     Button,
 } from "./MemoryStyles";
 
-const Memory: React.FC = () => {
-    const renderItem = () => (
-        <Item>
-            <Box>
-                <span>Algoritmos Genéticos para la optimización de rutas</span>
-                <span>Inteligencia Artificial</span>
-            </Box>
-        </Item>
-    );
+interface Props {
+    speechs: {
+        title: string;
+        category: string;
+        image: string;
+    }[];
+}
+
+const Memory: React.FC<Props> = ({ speechs }: Props) => {
     return (
         <Container>
             {/*          <TitleContainer>
@@ -27,14 +27,14 @@ const Memory: React.FC = () => {
                 </SubTitle>
             </TitleContainer> */}
             <Grid>
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
-                {renderItem()}
+                {speechs.map((speech, i) => (
+                    <Item url={speech.image} key={i}>
+                        <Box>
+                            <span>{speech.title}</span>
+                            <span>{speech.category}</span>
+                        </Box>
+                    </Item>
+                ))}
             </Grid>
             {/*      <Button>Ver más</Button> */}
         </Container>

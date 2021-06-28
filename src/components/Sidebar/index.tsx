@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, toggle }: Props) => {
                         duration={500}
                         spy={true}
                     >
-                        Horario
+                        Programa
                     </SidebarLink>
                     <SidebarLink
                         to="speakers"
@@ -56,7 +56,7 @@ const Sidebar = ({ isOpen, toggle }: Props) => {
                         duration={500}
                         spy={true}
                     >
-                        Inscríbete
+                        Reservas
                     </SidebarLink>
                     <SidebarLink
                         to="location"

@@ -16,6 +16,9 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { conferenceData, conferenceBoxes } from "./data/conference";
+import { sponsorsData } from "./data/sponsors";
+import { speakersData } from "./data/speakers";
 
 const App = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,13 +34,13 @@ const App = () => {
             <Hero />
             <About />
             <Extra />
-            <Schedule />
-            <Memory />
-            <Speakers />
+            <Schedule schedule={conferenceData} />
+            <Memory speechs={conferenceBoxes} />
+            <Speakers speakers={speakersData} />
             <Tickets />
             <Location />
             <Newsletter />
-            <Sponsors />
+            <Sponsors sponsors={sponsorsData} />
             <Hurry />
             <Footer />
         </Router>

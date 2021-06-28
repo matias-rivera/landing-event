@@ -71,6 +71,7 @@ export const TicketTitle = styled.h3`
     text-transform: uppercase;
     z-index: 10;
     transition: color 0.5s;
+    margin-top: 1.5rem; ;
 `;
 
 export const TicketPrice = styled.h1`
@@ -119,6 +120,8 @@ export const TicketButton = styled.button`
     border-radius: 5px;
     transition: all 0.2s;
     border: none;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
 
     align-self: center;
     z-index: 10;
@@ -137,6 +140,7 @@ export const SubTitle = styled.h4`
 
 export const Ticket = styled.div`
     width: 240px;
+
     height: 350px;
     background-image: radial-gradient(
             circle at 27% 33%,
@@ -163,7 +167,7 @@ export const Ticket = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     border-radius: 5px;
     position: relative;

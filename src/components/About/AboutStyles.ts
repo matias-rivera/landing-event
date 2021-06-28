@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Container = styled.section`
     padding: 5rem 10rem;
     display: flex;
     justify-content: space-between;
+    background: var(--gradient-white-2);
     gap: 2rem;
     @media (max-width: 1200px) {
         flex-direction: column;
@@ -43,7 +45,7 @@ export const InfoSubTitle = styled.h3`
 
 export const InfoTitle = styled.h1`
     font-size: 3rem;
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     @media (max-width: 768px) {
         text-align: center;
     }
@@ -85,7 +87,7 @@ export const InfoItem = styled.div`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled(LinkScroll)`
     color: white;
     text-transform: uppercase;
     padding: 1rem 1.5rem;
@@ -94,7 +96,8 @@ export const Button = styled.button`
     border: none;
     border-radius: 5px;
     transition: all 0.2s;
-    width: 15rem;
+    width: 10rem;
+    text-align: center;
     &:hover {
         cursor: pointer;
         background: var(--color-primary-dark);

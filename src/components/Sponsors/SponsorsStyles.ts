@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     padding: 5rem 10rem;
-    background: var(--gradient-white);
+    background: var(--gradient-white-2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 0.5rem;
 
     @media (max-width: 1200px) {
         padding: 5rem 5rem;
@@ -21,11 +21,19 @@ export const Container = styled.div`
     }
 `;
 
-export const Title = styled.h1`
+export const Underline = styled.hr`
     color: var(--color-primary-dark);
+    width: 100px;
+    align-self: center;
+    margin-bottom: 2rem;
 `;
 
-export const SponsorsContainer = styled.div`
+export const Title = styled.h1`
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+`;
+
+export const Sponsor = styled.div`
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -45,6 +53,12 @@ export const SponsorsContainer = styled.div`
             width: 75px;
         }
     }
+`;
+
+export const SponsorsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 `;
 
 export const Button = styled.button`

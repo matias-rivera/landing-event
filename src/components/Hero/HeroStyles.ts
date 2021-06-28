@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Container = styled.div`
     background-image: radial-gradient(
@@ -123,11 +124,13 @@ export const Location = styled(Text)`
 `;
 
 export const Company = styled(Text)`
+    color: var(--color-white-2);
+    font-size: 1.5rem;
     @media (max-width: 1024px) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     @media (max-width: 768px) {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
     }
 `;
@@ -143,7 +146,7 @@ export const Date = styled(Text)`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled(LinkScroll)`
     border: 2px solid currentColor;
     background: transparent;
     border-radius: 3rem;

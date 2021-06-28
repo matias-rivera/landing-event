@@ -51,7 +51,9 @@ const Navbar = ({ toggle }: Props) => {
                             duration={500}
                             spy={true}
                         >
-                            <h6>SOFTWARE XXI</h6>
+                            <h6>
+                                SOFT<span>WARE</span> X<span>XI</span>
+                            </h6>
                         </NavLink>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
@@ -74,7 +76,7 @@ const Navbar = ({ toggle }: Props) => {
                                     duration={500}
                                     spy={true}
                                 >
-                                    Horario
+                                    Programa
                                 </NavLinks>
                             </NavItem>
                             <NavItem>
@@ -94,7 +96,7 @@ const Navbar = ({ toggle }: Props) => {
                                     duration={500}
                                     spy={true}
                                 >
-                                    Suscribete
+                                    Reservas
                                 </NavLinks>
                             </NavItem>
                             <NavItem>

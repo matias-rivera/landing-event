@@ -43,6 +43,7 @@ export const Box = styled.div`
     transition: all 0.8s;
     font-size: 1.2rem;
     bottom: -1rem;
+    width: 100%;
 
     overflow: hidden;
 
@@ -65,10 +66,11 @@ export const Box = styled.div`
 `;
 
 export const Item = styled.div`
-    background: url("/images/memory.jpg");
+    background: ${({ url }: { url: string }) =>
+        `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${url})`};
     background-position: center;
     background-size: cover;
-    width: 100%;
+
     height: 250px;
     display: flex;
     justify-content: center;

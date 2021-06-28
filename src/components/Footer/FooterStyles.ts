@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkScroll } from "react-scroll";
 
 export const Container = styled.div`
     padding: 5rem 10rem;
@@ -19,6 +20,8 @@ export const Container = styled.div`
         padding: 3rem 2rem;
     }
 `;
+
+export const ItemLink = styled(LinkScroll)``;
 
 export const Title = styled.div`
     color: var(--color-white);
@@ -57,7 +60,7 @@ export const SubTitle = styled.h4`
     }
 `;
 
-export const SiteList = styled.ul`
+export const SiteList = styled.div`
     display: flex;
     list-style: none;
     gap: 1.5rem;
@@ -66,20 +69,22 @@ export const SiteList = styled.ul`
         flex-direction: column;
         justify-content: center;
     }
-`;
 
-export const SiteListItem = styled.li`
-    color: var(--color-white);
-    transition: all 0.2s;
+    & > * {
+        color: var(--color-white);
+        transition: all 0.2s;
 
-    font-weight: 600;
-    text-align: center;
-    &:hover {
-        cursor: pointer;
-        color: var(--color-primary);
-        transform: scale(1.1);
+        font-weight: 600;
+        text-align: center;
+        &:hover {
+            cursor: pointer;
+            color: var(--color-primary);
+            transform: scale(1.1);
+        }
     }
 `;
+
+export const SiteListItem = styled.li``;
 
 export const Copyright = styled.p`
     color: var(--color-gray-light);

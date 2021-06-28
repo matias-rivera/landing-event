@@ -56,7 +56,9 @@ const About: React.FC = () => {
                         <span>Tucumán - San Miguel de Tucumán</span>
                     </InfoItem>
                 </div>
-                <Button>Comprar Ticket</Button>
+                <Button to="subscribe" smooth={true} duration={500} spy={true}>
+                    Reserva
+                </Button>
             </InfoContainer>
             <CardsContainer>
                 <Card>
@@ -74,7 +76,7 @@ const About: React.FC = () => {
                     <CardIcon>
                         <FaUsers />
                     </CardIcon>
-                    <CardTitle>New People</CardTitle>
+                    <CardTitle>Talleres</CardTitle>
                     <CardText>
                         Es un hecho establecido hace demasiado tiempo que un
                         lector se distraerá.
@@ -85,7 +87,7 @@ const About: React.FC = () => {
                     <CardIcon>
                         <GiPublicSpeaker />
                     </CardIcon>
-                    <CardTitle>Speaking</CardTitle>
+                    <CardTitle>Presentaciones</CardTitle>
                     <CardText>
                         Es un hecho establecido hace demasiado tiempo que un
                         lector se distraerá.
@@ -96,7 +98,7 @@ const About: React.FC = () => {
                     <CardIcon>
                         <GiPartyPopper />
                     </CardIcon>
-                    <CardTitle>Have fun</CardTitle>
+                    <CardTitle>Diviértete</CardTitle>
                     <CardText>
                         Es un hecho establecido hace demasiado tiempo que un
                         lector se distraerá.

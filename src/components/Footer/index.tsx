@@ -7,6 +7,7 @@ import {
     Copyright,
     SocialList,
     SocialListItem,
+    ItemLink,
 } from "./FooterStyles";
 
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -42,11 +43,24 @@ const Footer: React.FC = () => {
                 </SocialListItem>
             </SocialList>
             <SiteList>
-                <SiteListItem>Información</SiteListItem>
-                <SiteListItem>Contacto</SiteListItem>
-                <SiteListItem>Entradas</SiteListItem>
-                <SiteListItem>Lugar</SiteListItem>
-                <SiteListItem>Términos y Condiciones</SiteListItem>
+                <ItemLink to="about" smooth={true} duration={500} spy={true}>
+                    Nosotros
+                </ItemLink>
+                <ItemLink to="schedule" smooth={true} duration={500} spy={true}>
+                    Programa
+                </ItemLink>
+                <ItemLink
+                    to="subscribe"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                >
+                    Reserva
+                </ItemLink>
+                <ItemLink to="location" smooth={true} duration={500} spy={true}>
+                    Contacto
+                </ItemLink>
+                <span>Términos y Condiciones</span>
             </SiteList>
             <Copyright>
                 © 2021, Matías Rivera. Todos los derechos reservados.

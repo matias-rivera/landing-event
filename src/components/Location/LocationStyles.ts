@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     padding: 5rem 10rem;
     gap: 1rem;
+    background: var(--gradient-white-2);
 
     @media (max-width: 1200px) {
         padding: 5rem 5rem;
@@ -50,11 +51,18 @@ export const MapContainer = styled.div`
     }
 `;
 
+export const Black = styled.span`
+    color: black !important;
+    font-weight: 600;
+`;
+
 export const Info = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 1rem;
+
     @media (max-width: 1024px) {
         width: 100%;
         gap: 2rem;
@@ -64,6 +72,13 @@ export const Info = styled.div`
     }
 `;
 
+export const SwitchContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+        align-items: center;
+    }
+`;
 export const SubTitle = styled.h4`
     color: var(--color-gray);
     font-weight: 400;

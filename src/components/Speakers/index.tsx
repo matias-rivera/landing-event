@@ -27,41 +27,47 @@ import Modal from "../Modal";
 import { BsPlusCircle } from "react-icons/bs";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const Speakers: React.FC = () => {
+interface Props {
+    speakers: {
+        picture: string;
+        name: string;
+        job: string;
+        company: {
+            name: string;
+            image: string;
+        };
+        bio: string;
+    }[];
+}
+
+const Speakers: React.FC<Props> = ({ speakers }: Props) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const renderSpeaker = () => (
-        <Speaker>
-            <PictureContainer>
-                <Picture src={"/images/person.jpg"} />
-                <PictureIcon>
-                    <BsPlusCircle onClick={() => setIsOpen(true)} />
-                </PictureIcon>
-            </PictureContainer>
-            <SpeakerName>Alfredo Paredes</SpeakerName>
-            <SpeakerInfo>UI/UX Designer</SpeakerInfo>
-        </Speaker>
-    );
+    const [speaker, setSpeaker] = useState<number>(0);
+
+    const handleModal = (id: number) => {
+        setSpeaker(id);
+        setIsOpen(true);
+    };
+
     return (
         <Container id="speakers">
             <Modal open={isOpen} onClose={() => setIsOpen(false)}>
                 <Profile>
-                    <ProfilePicture src={"/images/person.jpg"} />
+                    <ProfilePicture src={speakers[speaker].picture} />
                     <ProfileInfo>
                         <div>
-                            <ProfileTitle>Alfredo Paredes</ProfileTitle>
-                            <ProfileSubTitle>UI/UX Designer</ProfileSubTitle>
+                            <ProfileTitle>
+                                {speakers[speaker].name}
+                            </ProfileTitle>
+                            <ProfileSubTitle>
+                                {speakers[speaker].job}
+                            </ProfileSubTitle>
                         </div>
                         <ProfileCompany
-                            src={
-                                "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg"
-                            }
+                            src={speakers[speaker].company.image}
+                            alt={speakers[speaker].company.name}
                         />
-                        <ProfileBio>
-                            World is committed to making participation in the
-                            event a harass ment free experience for everyone,
-                            regardless of level experience gender, gender
-                            identity and expression
-                        </ProfileBio>
+                        <ProfileBio>{speakers[speaker].bio}</ProfileBio>
                         <SocialList>
                             <SocialListItem>
                                 <FaFacebook />
@@ -83,14 +89,18 @@ const Speakers: React.FC = () => {
             <Title>Presentadores</Title>
             <Underline />
             <SpeakersContainer>
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
-                {renderSpeaker()}
+                {speakers.map((speaker, i) => (
+                    <Speaker key={i}>
+                        <PictureContainer>
+                            <Picture src={speaker.picture} />
+                            <PictureIcon>
+                                <BsPlusCircle onClick={() => handleModal(i)} />
+                            </PictureIcon>
+                        </PictureContainer>
+                        <SpeakerName>{speaker.name}</SpeakerName>
+                        <SpeakerInfo>{speaker.job}</SpeakerInfo>
+                    </Speaker>
+                ))}
             </SpeakersContainer>
         </Container>
     );
