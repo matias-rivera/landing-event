@@ -20,12 +20,6 @@ interface Props {
 const Memory: React.FC<Props> = ({ speechs }: Props) => {
     return (
         <Container>
-            {/*          <TitleContainer>
-                <Title>Momentos del año pasado</Title>
-                <SubTitle>
-                    Explora las presentaciones memorables del año 2020.
-                </SubTitle>
-            </TitleContainer> */}
             <Grid>
                 {speechs.map((speech, i) => (
                     <Item url={speech.image} key={i}>
@@ -36,7 +30,6 @@ const Memory: React.FC<Props> = ({ speechs }: Props) => {
                     </Item>
                 ))}
             </Grid>
-            {/*      <Button>Ver más</Button> */}
         </Container>
     );
 };

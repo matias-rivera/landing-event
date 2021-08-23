@@ -6,14 +6,10 @@ import {
     Nav,
     NavbarContainer,
     NavLink,
-    Logo,
     MobileIcon,
     NavMenu,
     NavItem,
     NavLinks,
-    NavBtn,
-    NavBtnLink,
-    LinksContainer,
 } from "./NavbarElements";
 
 interface Props {

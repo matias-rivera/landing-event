@@ -133,9 +133,18 @@ export const TicketButton = styled.button`
 `;
 
 export const SubTitle = styled.h4`
-    color: var(--color-white);
+    color: var(--color-gray-light);
     font-weight: 400;
     text-align: center;
+
+    & > span {
+        transition: all 0.3s;
+        color: var(--color-primary);
+        &:hover {
+            cursor: pointer;
+            color: var(--color-primary-strong);
+        }
+    }
 `;
 
 export const Ticket = styled.div`

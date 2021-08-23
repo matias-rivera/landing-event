@@ -88,8 +88,8 @@ const Tickets = () => {
                 </Ticket>
             </TicketContainer>
             <SubTitle>
-                All prices exclude 25% VAT. For more details, view our{" "}
-                <span>Terms & Conditions</span>
+                Para más detalles revisa nuestros{" "}
+                <span>Términos & Condiciones</span>
             </SubTitle>
         </Container>
     );

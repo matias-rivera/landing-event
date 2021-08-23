@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <div>
                 <Title>
                     <h1>
-                        <span>SOFT</span>WARE
+                        SOFT<span>WARE</span>
                     </h1>
                     <span />
                     <h1>

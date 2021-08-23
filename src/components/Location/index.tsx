@@ -69,12 +69,6 @@ const Location: React.FC = () => {
                         >
                             Programa
                         </SwitchButton>
-                        {/*                         <SwitchButton
-                            active={option === 3}
-                            onClick={() => setOption(3)}
-                        >
-                            Como llegar
-                        </SwitchButton> */}
                     </Switch>
                     <InfoBox>{renderInfo()}</InfoBox>
                 </SwitchContainer>
