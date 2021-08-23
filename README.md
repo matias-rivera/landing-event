@@ -60,16 +60,13 @@ Sections:
 
 ### Built With
 
+* [ReactJS](https://es.reactjs.org/)
 * [TypeScript](https://github.com/microsoft/TypeScript)
 * [Styled Components](https://github.com/styled-components/styled-components)
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 
 ### Installation
 
@@ -83,32 +80,28 @@ To get a local copy up and running follow these simple example steps.
    npm install
    ```
 4. Enter your API and the coordinates in `.env.example`, after that change the name to `.env`
-   ```JS
-   REACT_APP_MAP_LAT= 'LATITUDE';
-   REACT_APP_MAP_LNG= 'LONGITUDE';
-   REACT_APP_MAP_API= 'API KEY';
+   ```sh
+   REACT_APP_MAP_LAT= 'LATITUDE'
+   REACT_APP_MAP_LNG= 'LONGITUDE'
+   REACT_APP_MAP_API= 'API KEY'
    ```
 5. RUN 
    ```sh
    npm start
    ```
-
+   
 ### Run with Docker
 
-
-* Docker build
-   ```sh
-   docker build .
-   ```
+1. Install [Docker](https://www.docker.com/). More information [here](https://docs.docker.com/desktop/windows/install/).
+2. Clone the repo
     ```sh
-   docker run -p 3000:80 [DOCKER IMAGE]
-   ```
-   
-* Docker compose
-   ```sh
-   docker-compose up --build
-   ```
-
+    git clone https://github.com/matias-rivera/landing-event.git
+    ```
+3. Run Docker compose
+    ```sh
+    docker-compose up --build
+    ```
+4. It should start at "localhost:3000".
 
 <!-- LICENSE -->
 ## License
